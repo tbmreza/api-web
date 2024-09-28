@@ -16,7 +16,7 @@
 </head>
 <body>
     <form id="loginForm">
-        <input type="text" id="username" placeholder="Username" required>
+        <input type="text" id="username" placeholder="Username" value="admin" required>
         <input type="password" id="password" placeholder="Password" required>
         <button type="submit">Login</button>
     </form>
@@ -28,13 +28,21 @@
             >
         Load placeholder
     </button>
+    <button hx-get="https://wust.rezahandzalah.workers.dev/dd"
+            hx-trigger="click"
+            hx-target="#posts-list"
+            hx-indicator="#spinner"
+            hx-swap="innerHTML"
+            >
+        https://wust.rezahandzalah.workers.dev/dd
+    </button>
     <button hx-get="https://wust.rezahandzalah.workers.dev/login"
             hx-trigger="click"
             hx-target="#posts-list"
             hx-indicator="#spinner"
             hx-swap="innerHTML"
             >
-        Load str
+        https://wust.rezahandzalah.workers.dev/login
     </button>
 
     <div id="spinner" class="htmx-indicator mt-4">
@@ -52,6 +60,11 @@
         document.body.addEventListener('htmx:responseError', function(evt) {
             console.error('HTMX request failed:', evt.detail.error);
             document.querySelector('#posts-list').innerHTML = '<p class="text-red-500">Failed to load posts. Please try again later.</p>';
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var inputElement = document.getElementById('password');
+            inputElement.focus();
         });
     </script>
 </body>
