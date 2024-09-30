@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <script src="/vendor/htmx.org/2.0.2/htmx.min.js"></script> -->
     <!-- <script src="/vendor/htmx.org/1.9.4/htmx.min.js"></script> -->
-    <script src="https://unpkg.com/htmx.org@1.9.4"></script>
+    <!-- <script src="https://unpkg.com/htmx.org@1.9.4"></script> -->
     <title>Auth</title>
     <style>
         body { font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #f0f0f0; }
@@ -20,52 +20,63 @@
         <input type="password" id="password" placeholder="Password" required>
         <button type="submit">Login</button>
     </form>
-    <button hx-get="https://jsonplaceholder.typicode.com/posts"
-            hx-trigger="click"
-            hx-target="#posts-list"
-            hx-indicator="#spinner"
-            hx-swap="innerHTML"
-            >
-        Load placeholder
-    </button>
-    <button hx-get="https://wust.rezahandzalah.workers.dev/dd"
-            hx-trigger="click"
-            hx-target="#posts-list"
-            hx-indicator="#spinner"
-            hx-swap="innerHTML"
-            >
-        https://wust.rezahandzalah.workers.dev/dd
-    </button>
-    <button hx-get="https://wust.rezahandzalah.workers.dev/login"
-            hx-trigger="click"
-            hx-target="#posts-list"
-            hx-indicator="#spinner"
-            hx-swap="innerHTML"
-            >
-        https://wust.rezahandzalah.workers.dev/login
-    </button>
+    <!-- <button hx-get="https://jsonplaceholder.typicode.com/posts" -->
+    <!--         hx-trigger="click" -->
+    <!--         hx-target="#posts-list" -->
+    <!--         hx-indicator="#spinner" -->
+    <!--         hx-swap="innerHTML" -->
+				<!-- 		style="display:none" -->
+    <!--         > -->
+    <!--     Load placeholder -->
+    <!-- </button> -->
+    <!-- <button hx-get="https://jsonplaceholder.typicode.com/posts/1" -->
+    <!--         hx-trigger="click" -->
+    <!--         hx-target="#posts-list" -->
+    <!--         hx-indicator="#spinner" -->
+    <!--         hx-swap="innerHTML" -->
+    <!--         > -->
+				<!-- 	SS -->
+    <!-- </button> -->
+    <!-- <button hx-get="https://wust.rezahandzalah.workers.dev/dd" -->
+    <!--         hx-trigger="click" -->
+    <!--         hx-target="#posts-list" -->
+    <!--         hx-indicator="#spinner" -->
+    <!--         hx-swap="innerHTML" -->
+				<!-- 		style="display:none" -->
+    <!--         > -->
+    <!--     https://wust.rezahandzalah.workers.dev/dd -->
+    <!-- </button> -->
+    <!-- <button hx-get="https://wust.rezahandzalah.workers.dev/login" -->
+    <!--         hx-trigger="click" -->
+    <!--         hx-target="#posts-list" -->
+    <!--         hx-indicator="#spinner" -->
+    <!--         hx-swap="innerHTML" -->
+				<!-- 		style="display:none" -->
+    <!--         > -->
+    <!--     https://wust.rezahandzalah.workers.dev/login -->
+    <!-- </button> -->
 
-    <div id="spinner" class="htmx-indicator mt-4">
-        Loading...
-    </div>
+    <!-- <div id="spinner" class="htmx-indicator mt-4"> -->
+    <!--     Loading... -->
+    <!-- </div> -->
 
     <div id="posts-list" class="mt-4 space-y-2">
         <!-- Posts will be inserted here -->
     </div>
-    <script>
-        document.body.addEventListener('htmx:afterRequest', function(evt) {
-            console.log("afterRequest....")
-        });
-
-        document.body.addEventListener('htmx:responseError', function(evt) {
-            console.error('HTMX request failed:', evt.detail.error);
-            document.querySelector('#posts-list').innerHTML = '<p class="text-red-500">Failed to load posts. Please try again later.</p>';
-        });
-
-        document.addEventListener('DOMContentLoaded', function() {
-            var inputElement = document.getElementById('password');
-            inputElement.focus();
-        });
-    </script>
+    <!-- <script> -->
+    <!--     document.body.addEventListener('htmx:afterRequest', function(evt) { -->
+    <!--         console.log("afterRequest....") -->
+    <!--     }); -->
+    <!---->
+    <!--     document.body.addEventListener('htmx:responseError', function(evt) { -->
+    <!--         console.error('HTMX request failed:', evt.detail.error); -->
+    <!--         document.querySelector('#posts-list').innerHTML = '<p class="text-red-500">Failed to load posts. Please try again later.</p>'; -->
+    <!--     }); -->
+    <!---->
+    <!--     document.addEventListener('DOMContentLoaded', function() { -->
+    <!--         var inputElement = document.getElementById('password'); -->
+    <!--         inputElement.focus(); -->
+    <!--     }); -->
+    <!-- </script> -->
 </body>
 </html>
