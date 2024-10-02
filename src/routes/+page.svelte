@@ -1,10 +1,11 @@
 <script>
-	// console.log("")
+	console.log("jj")
 </script>
 
 <form method="POST">
 	<input type="text" placeholder="Username" value="admin" required>
 
+	<!-- ?? element name warning -->
 	<!-- svelte-ignore a11y-autofocus "business use" -->
 	<input type="password" autofocus required>
 
